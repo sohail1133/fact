@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electrical Engineer Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #e0e0e0;
+      line-height: 1.6;
+      background-color: #121212;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    header {
+      background: linear-gradient(45deg, #4CAF50, #3E8E41);
+      color: #fff;
+      text-align: center;
+      padding: 1.5rem 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+    }
+
+    nav {
+      background: #1E1E1E;
+      padding: 0.5rem 0;
+      text-align: center;
+    }
+
+    nav a {
+      color: #e0e0e0;
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #4CAF50;
+    }
+
+    section {
+      padding: 2rem 0;
+    }
+
+    .container {
+      width: 90%;
+      margin: 0 auto;
+      max-width: 1200px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #4CAF50;
+      margin-bottom: 1rem;
+    }
+
+    .skills ul, .education ul, .contact ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .skills li, .education li, .contact li {
+      background: #1E1E1E;
+      margin: 0.5rem 0;
+      padding: 0.8rem;
+      border-left: 5px solid #4CAF50;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .skills li:hover, .education li:hover, .contact li:hover {
+      transform: scale(1.03);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    footer {
+      background: #1E1E1E;
+      color: #e0e0e0;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 2rem;
+    }
+
+    button, .dark-mode-toggle {
+      display: block;
+      margin: 1rem auto;
+      padding: 0.8rem 1.5rem;
+      background: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    button:hover, .dark-mode-toggle:hover {
+      background: #3E8E41;
+      transform: scale(1.05);
+    }
+
+    /* Dark Mode Toggle */
+    .dark-mode-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background: #1E1E1E;
+      color: #4CAF50;
+      border: 1px solid #4CAF50;
+      padding: 0.5rem 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Asif Reza</h1>
+      <p>Electrical Engineer | B.Tech Graduate | Electrical Supervisor</p>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>
+        I am a results-driven and detail-oriented Electrical Engineer with experience in designing and implementing innovative electrical solutions. Skilled in project management and team leadership.
+      </p>
+      <img id="profile-photo" src="WhatsApp Image 2025-01-03 at 17.40.06_84d29515.jpg" alt="Profile Photo" style="width: 150px; height: 150px; border-radius: 50%;">
+      <input type="file" id="upload-photo" accept="image/*" style="display: block; margin: 1rem auto;">
+      <button id="download-resume">Download Resume</button>
+    </div>
+  </section>
+
+  <section id="skills" class="skills">
+    <div class="container">
+      <h2>Skills</h2>
+      <ul>
+        <li>PLC Automation</li>
+        <li>ADCA (Advanced Diploma in Computer Applications)</li>
+        <li>MS Excel, MS Word</li>
+        <li>Internet Browsing</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="education" class="education">
+    <div class="container">
+      <h2>Education</h2>
+      <ul>
+        <li>B.Tech in Electrical Engineering - Madhyanchal University</li>
+        <li>Diploma in Electrical Engineering - DBU Chandigarh</li>
+        <li>HSC - High School Jharkmahiu, Patna</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact Details</h2>
+      <ul>
+        <li>Email: asif.reza@example.com</li>
+        <li>Phone: +91-9876543210</li>
+        <li>facebook: <a href="#" target="_blank" style="color: #4CAF50;">linkedin.com/in/asifreza</a></li>
+        <li>GitHub: <a href="#" target="_blank" style="color: #4CAF50;">github.com/asifreza</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 sohail akhtar | All rights reserved.</p>
+  </footer>
+
+  <button class="dark-mode-toggle">Toggle Dark Mode</button>
+
+  <script>
+    // Photo Upload Functionality
+    const uploadPhotoInput = document.getElementById("upload-photo");
+    const profilePhoto = document.getElementById("profile-photo");
+
+    uploadPhotoInput.addEventListener("change", function () {
+      const file = this.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          profilePhoto.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+
+    // Resume Download Functionality
+    const downloadResumeButton = document.getElementById("download-resume");
+    downloadResumeButton.addEventListener("click", function () {
+      const link = document.createElement("a");
+      link.href = "asifress.jpg"; // Replace with the correct resume file path
+      link.download = "asifress.jpg";
+      link.click();
+    });
+
+    // Dark Mode Toggle
+    const darkModeToggle = document.querySelector(".dark-mode-toggle");
+    darkModeToggle.addEventListener("click", function () {
+      document.body.classList.toggle("dark");
+      const isDark = document.body.classList.contains("dark");
+      document.body.style.backgroundColor = isDark ? "#121212" : "#ffffff";
+      document.body.style.color = isDark ? "#e0e0e0" : "#333";
+    });
+  </script>
+</body>
+</html>
